@@ -1,0 +1,124 @@
+[indexedcollections.IndexedCollections] - SET name = 'bob' FOR ITEM a029a260-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for name found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(name, a02e0f30-3643-11e5-967d-b8f6b11b5725) = composite(bob) WHERE KEY = a029a260-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(1, bob, a029a260-3643-11e5-967d-b8f6b11b5725, a02e0f30-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:name
+[indexedcollections.IndexedCollections] - UPDATE Item SET name = bob WHERE KEY = a029a260-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET name = 'fred' FOR ITEM a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for name found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(name, a0305920-3643-11e5-967d-b8f6b11b5725) = composite(fred) WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(1, fred, a029f080-3643-11e5-967d-b8f6b11b5725, a0305920-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:name
+[indexedcollections.IndexedCollections] - UPDATE Item SET name = fred WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET name = 'bill' FOR ITEM a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for name found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(name, a030f560-3643-11e5-967d-b8f6b11b5725) = composite(bill) WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(1, bill, a029f081-3643-11e5-967d-b8f6b11b5725, a030f560-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:name
+[indexedcollections.IndexedCollections] - UPDATE Item SET name = bill WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexTest] - SELECT WHERE name = 'fred'
+[indexedcollections.IndexedCollections] - Value found: fred
+[indexedcollections.IndexTest] - 1 results found
+[indexedcollections.IndexTest] - Result found is a029f080-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET name = 'steve' FOR ITEM a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 1 previous values for name found in index for removal
+[indexedcollections.IndexedCollections] - DELETE composite([name, a0305920-3643-11e5-967d-b8f6b11b5725], a0305920-3643-11e5-967d-b8f6b11b5725) FROM Item_Index_Entries WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(name, a03191a0-3643-11e5-967d-b8f6b11b5725) = composite(steve) WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - DELETE composite(1, fred, a029f080-3643-11e5-967d-b8f6b11b5725, a0305920-3643-11e5-967d-b8f6b11b5725) FROM Collection_Index WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:name
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(1, steve, a029f080-3643-11e5-967d-b8f6b11b5725, a03191a0-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:name
+[indexedcollections.IndexedCollections] - UPDATE Item SET name = steve WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexTest] - SELECT WHERE name = 'fred'
+[indexedcollections.IndexTest] - 0 results found
+
+[indexedcollections.IndexTest] - SELECT WHERE name >= 'bill' AND name < 'c'
+[indexedcollections.IndexedCollections] - Value found: bill
+[indexedcollections.IndexedCollections] - Value found: bob
+[indexedcollections.IndexTest] - 2 results found
+
+[indexedcollections.IndexedCollections] - SET height = '5' FOR ITEM a029a260-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for height found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(height, a032f130-3643-11e5-967d-b8f6b11b5725) = composite(5) WHERE KEY = a029a260-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(3, 5, a029a260-3643-11e5-967d-b8f6b11b5725, a032f130-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:height
+[indexedcollections.IndexedCollections] - UPDATE Item SET height = 5 WHERE KEY = a029a260-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET height = '6' FOR ITEM a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for height found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(height, a0338d70-3643-11e5-967d-b8f6b11b5725) = composite(6) WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(3, 6, a029f080-3643-11e5-967d-b8f6b11b5725, a0338d70-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:height
+[indexedcollections.IndexedCollections] - UPDATE Item SET height = 6 WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET height = '7' FOR ITEM a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for height found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(height, a03402a0-3643-11e5-967d-b8f6b11b5725) = composite(7) WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(3, 7, a029f081-3643-11e5-967d-b8f6b11b5725, a03402a0-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:height
+[indexedcollections.IndexedCollections] - UPDATE Item SET height = 7 WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexTest] - SELECT WHERE height = 6
+[indexedcollections.IndexedCollections] - Value found: 6
+[indexedcollections.IndexTest] - 1 results found
+
+[indexedcollections.IndexTest] - SELECT WHERE height >= 6 AND name < 10
+[indexedcollections.IndexedCollections] - Value found: 6
+[indexedcollections.IndexedCollections] - Value found: 7
+[indexedcollections.IndexTest] - 2 results found
+
+[indexedcollections.IndexedCollections] - SET height = '5' FOR ITEM a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 1 previous values for height found in index for removal
+[indexedcollections.IndexedCollections] - DELETE composite([height, a03402a0-3643-11e5-967d-b8f6b11b5725], a03402a0-3643-11e5-967d-b8f6b11b5725) FROM Item_Index_Entries WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(height, a0351410-3643-11e5-967d-b8f6b11b5725) = composite(5) WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - DELETE composite(3, 7, a029f081-3643-11e5-967d-b8f6b11b5725, a03402a0-3643-11e5-967d-b8f6b11b5725) FROM Collection_Index WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:height
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(3, 5, a029f081-3643-11e5-967d-b8f6b11b5725, a0351410-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:height
+[indexedcollections.IndexedCollections] - UPDATE Item SET height = 5 WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - Value found: 6
+[indexedcollections.IndexTest] - 1 results found
+
+[indexedcollections.IndexedCollections] - SET bytes = '[B@7c0cbf92' FOR ITEM a029a260-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for bytes found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(bytes, a035fe70-3643-11e5-967d-b8f6b11b5725) = composite([B@7c0cbf92) WHERE KEY = a029a260-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(0, java.nio.HeapByteBuffer[pos=0 lim=3 cap=3], a029a260-3643-11e5-967d-b8f6b11b5725, a035fe70-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:bytes
+[indexedcollections.IndexedCollections] - UPDATE Item SET bytes = [B@7c0cbf92 WHERE KEY = a029a260-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET bytes = '[B@516f3619' FOR ITEM a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for bytes found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(bytes, a0369ab0-3643-11e5-967d-b8f6b11b5725) = composite([B@516f3619) WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(0, java.nio.HeapByteBuffer[pos=0 lim=3 cap=3], a029f080-3643-11e5-967d-b8f6b11b5725, a0369ab0-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:bytes
+[indexedcollections.IndexedCollections] - UPDATE Item SET bytes = [B@516f3619 WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET bytes = '[B@21ce9f9d' FOR ITEM a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for bytes found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(bytes, a0370fe0-3643-11e5-967d-b8f6b11b5725) = composite([B@21ce9f9d) WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(0, java.nio.HeapByteBuffer[pos=0 lim=3 cap=3], a029f081-3643-11e5-967d-b8f6b11b5725, a0370fe0-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:bytes
+[indexedcollections.IndexedCollections] - UPDATE Item SET bytes = [B@21ce9f9d WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - Value found: java.nio.HeapByteBuffer[pos=0 lim=3 cap=3]
+[indexedcollections.IndexTest] - 1 results found
+
+[indexedcollections.IndexedCollections] - Value found: java.nio.HeapByteBuffer[pos=0 lim=3 cap=3]
+[indexedcollections.IndexedCollections] - Value found: java.nio.HeapByteBuffer[pos=0 lim=3 cap=3]
+[indexedcollections.IndexTest] - 2 results found
+
+[indexedcollections.IndexedCollections] - SET location = 'san francisco' FOR ITEM a029a260-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for location found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(location, a037fa40-3643-11e5-967d-b8f6b11b5725) = composite(san francisco) WHERE KEY = a029a260-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(1, san francisco, a029a260-3643-11e5-967d-b8f6b11b5725, a037fa40-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:location
+[indexedcollections.IndexedCollections] - UPDATE Item SET location = san francisco WHERE KEY = a029a260-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET location = 'san diego' FOR ITEM a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for location found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(location, a0384860-3643-11e5-967d-b8f6b11b5725) = composite(san diego) WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(1, san diego, a029f080-3643-11e5-967d-b8f6b11b5725, a0384860-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:location
+[indexedcollections.IndexedCollections] - UPDATE Item SET location = san diego WHERE KEY = a029f080-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexedCollections] - SET location = 'santa clara' FOR ITEM a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - 0 previous values for location found in index for removal
+[indexedcollections.IndexedCollections] - UPDATE Item_Index_Entries SET composite(location, a0389680-3643-11e5-967d-b8f6b11b5725) = composite(santa clara) WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+[indexedcollections.IndexedCollections] - UPDATE Collection_Index SET composite(1, santa clara, a029f081-3643-11e5-967d-b8f6b11b5725, a0389680-3643-11e5-967d-b8f6b11b5725) = null WHERE KEY = a02387e0-3643-11e5-967d-b8f6b11b5725:employees:location
+[indexedcollections.IndexedCollections] - UPDATE Item SET location = santa clara WHERE KEY = a029f081-3643-11e5-967d-b8f6b11b5725
+
+[indexedcollections.IndexTest] - 0 results found
+
+[indexedcollections.IndexedCollections] - Value found: san francisco
+[indexedcollections.IndexTest] - 1 results found
